@@ -1,0 +1,3 @@
+[submodule "cmrx"]
+	path = cmrx
+	url = git@github.com:ventZl/cmrx.git
