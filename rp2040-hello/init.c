@@ -1,7 +1,6 @@
 #include <cmrx/application.h>
 #include <pico/stdlib.h>
 #include <cmrx/ipc/timer.h>
-#error "boo"
 
 char data[128];
 

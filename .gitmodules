@@ -1,3 +1,6 @@
 [submodule "cmrx"]
 	path = cmrx
 	url = https://github.com/ventZl/cmrx.git
+[submodule "pico-sdk"]
+	path = pico-sdk
+	url = https://github.com/raspberrypi/pico-sdk

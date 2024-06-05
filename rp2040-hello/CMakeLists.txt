@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 3.12)
 
-#set(PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/../pico-sdk)
-
-#include_directories(${CMAKE_SOURCE_DIR}/../pico-sdk)
-
 if (NOT PICO_SDK_PATH)
-    message(FATAL_ERROR "Path to Raspberry Pi Pico SDK not set. Use -DPICO_SDK_PATH=<path> to point to pico-sdk!")
+    execute_process(COMMAND git submodule update -- ${CMAKE_SOURCE_DIR}/../pico-sdk)
+    set (PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/../pico-sdk)
+    #    message(FATAL_ERROR "Path to Raspberry Pi Pico SDK not set. Use -DPICO_SDK_PATH=<path> to point to pico-sdk!")
 endif()
 
 list(APPEND CMAKE_MODULE_PATH "${PICO_SDK_PATH}/external")
@@ -35,6 +33,7 @@ include(CMRX)
 include(testing)
 
 add_subdirectory(../cmrx ${CMAKE_BINARY_DIR}/cmrx)
+add_subdirectory(../cmrx/quirks ${CMAKE_BINARY_DIR}/quirks)
 
 set(helloworld_SRCS main.c)
 add_firmware(helloworld ${helloworld_SRCS})
