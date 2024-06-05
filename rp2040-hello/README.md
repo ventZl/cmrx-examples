@@ -1,8 +1,25 @@
-Temporary mashup directory for porting of CMRX onto CMSIS-based HALs
-====================================================================
+RP2040 example running CMRX
+===========================
 
-This is a mashup of three distinct things:
-* RPi-Pico SDK, which contains CMSIS for Cortex-M0+ and RPi Pico peripherals
-* CMRX tree where shim for pico is being developped. This shim is named as rpi-pico, but
-  in fact it may serve as basis for any CMSIS-based HAL (hopefully)
-* small main.c carrying one CMRX process + thread and CMakeLists.txt gluing everything together
+This example demonstrates how to implement blinky using CMRX and RPi-Pico SDK.
+
+Build instructions
+------------------
+
+Assuming you cloned this from git and actually ran git submodule update --init in the root
+of this repository, build is rather straightforward. Make sure you have ARM cross-compile 
+toolchain installed on your machine and it is present in the path (e.g. `arm-none-eabi-gcc`
+can be found). Then use following commands:
+
+~~~~~~~~~~~~~~~
+cmake -B build .
+cmake --build build -- -j
+~~~~~~~~~~~~~~~
+
+File `build/helloworld.elf` should be created. You can flash it into your Raspberry Pi Pico 
+using debugger. If you don't have debug probe, then you can use the file `build/helloworld.uf2`
+which can be flashed directly into Rasperry Pi Pico via USB port. Just hold the BOOTSEL button
+while connecting your Pico to USB. It will appear as a USB stick. You can copy the 
+`helloworld.uf2` there and it will be flashed automatically.
+
+

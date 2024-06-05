@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.12)
 
 if (NOT PICO_SDK_PATH)
-    execute_process(COMMAND git submodule update -- ${CMAKE_SOURCE_DIR}/../pico-sdk)
+    execute_process(COMMAND git submodule update --init -- ${CMAKE_SOURCE_DIR}/../pico-sdk)
     set (PICO_SDK_PATH ${CMAKE_SOURCE_DIR}/../pico-sdk)
     #    message(FATAL_ERROR "Path to Raspberry Pi Pico SDK not set. Use -DPICO_SDK_PATH=<path> to point to pico-sdk!")
 endif()
@@ -32,6 +32,10 @@ set(CMRX_HAL cmsis)
 include(CMRX)
 include(testing)
 
+# Include the directory where kernel sources live
+# Normally this would be a subdirectory of your source tree
+# but here it is shared among projects, so we have to provide 
+# a path where binary directory for kernel will live.
 add_subdirectory(../cmrx ${CMAKE_BINARY_DIR}/cmrx)
 add_subdirectory(../cmrx/quirks ${CMAKE_BINARY_DIR}/quirks)
 
@@ -44,3 +48,5 @@ target_link_libraries(init stdlib pico_stdlib_headers)
 
 target_link_libraries(helloworld cmrx aux_systick pico_stdlib pico_stdlib_headers)
 target_add_applications(helloworld init)
+
+pico_add_extra_outputs(helloworld)
