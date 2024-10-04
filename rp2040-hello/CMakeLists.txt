@@ -20,6 +20,9 @@ set(CMSIS_LINKER_FILE ${PICO_SDK_PATH}/src/rp2_common/pico_standard_link/memmap_
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ggdb3")
 include(FindCMSIS)
 
+# stdlib needs to link against CMSIS core for this to link (Pico SDK quirk)
+set(CMRX_STDLIB_USE_CMSIS_CORE true)
+
 pico_sdk_init()
 
 add_link_options(-Wl,--gc-sections)
