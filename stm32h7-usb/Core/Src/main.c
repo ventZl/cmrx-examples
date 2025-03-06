@@ -60,6 +60,10 @@ static void MX_USB_OTG_FS_PCD_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+long timing_get_current_cpu_freq(void)
+{
+    return SystemCoreClock;
+}
 
 /* USER CODE END 0 */
 
