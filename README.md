@@ -14,9 +14,9 @@ git submodule update --init --recursive
 In order to build any of the examples, enter the subdirectory of the example and run:
 
 ~~~~~~~~~~~~
-mkdir build
-cd build && cmake ..
-make -j
+cd path/to/cmrx-examples/rp2040-hello
+cmake -DPICO_SDK_PATH=../pico-sdk -B build .
+cmake --build build -- -j
 ~~~~~~~~~~~~
 
 It is the nature of CMRX build, that you may see a following message in the build output:
