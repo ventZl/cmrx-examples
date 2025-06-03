@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.12)
 
 if (NOT PICO_SDK_PATH)
-    #    message(FATAL_ERROR "Path to Raspberry Pi Pico SDK not set. Use -DPICO_SDK_PATH=<path> to point to pico-sdk!")
+    message(STATUS "Using Pico-SDK bundled with examples repository. If you want different Pico-SDK pass -DPICO_SDK_PATH=<path> to CMake!")
+    set(PICO_SDK_PATH ${CMAKE_CURRENT_SOURCE_DIR}/../pico-sdk)
 endif()
 
 list(APPEND CMAKE_MODULE_PATH "${PICO_SDK_PATH}/external")
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/../cmrx/cmake")
+
+set(CMRX_MAP_FILE_WITH_EXTENSION TRUE)
 
 include(pico_sdk_import)
 
