@@ -1,7 +1,7 @@
 #include <cmrx/application.h>
 #include "data.h"
 
-int thread_main(void * data)
+static int thread_main(void * data)
 {
     struct ThreadData * var = (struct ThreadData *) data;
     while (1) {
