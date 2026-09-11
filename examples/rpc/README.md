@@ -4,7 +4,7 @@ id: 2
 ---
 {{< gh >}}
 
-This example demonstrates how to create RPC service and how to call it from another process. In this example two processes are created. Instead it defines `service` variable which serves as RPC service. This service is then called from `client` process. This example shows:
+This example demonstrates how to create RPC service and how to call it from another process. In this example two processes are created. `rpcserver` process defines `service` variable which serves as RPC service. This service is then called from `client` process via `rpc_call` construct. This example shows:
 * Declaration of shared interface `ServiceAPI`
 * Use of `INSTANCE(this)` to refer to service instance
 * Use of `IMPLEMENTATION_OF()` macro to declare implementation of `ServiceAPI` for specific service type
@@ -22,4 +22,7 @@ $ cmake --build build
 
 Resulting binary will be called `rpc.elf` or `rpc`. To run it, follow instructions on running binaries on your selected target platform.
 
+## See also
 
+* [Reference manual - IPC](https://cmrxrtos.org/documentation/ipc/)
+* [API documentation - RPC](https://cmrxrtos.org/documentation/api/rpc/)

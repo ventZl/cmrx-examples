@@ -50,3 +50,8 @@ $ cmake --build build
 ~~~~~
 
 Resulting binary will be called `hello_world.elf` or `hello_world`. To run it, follow instructions on running binaries on your selected target platform.
+
+## See also
+
+* [Reference manual - Processes](https://cmrxrtos.org/documentation/processes/)
+* [API documentation - Static Initialization](https://cmrxrtos.org/documentation/api/init/)
