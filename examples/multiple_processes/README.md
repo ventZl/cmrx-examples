@@ -19,7 +19,7 @@ Despite same names, both variables and functions are different objects.
 To build this example choose your target platform (more in Examples) and run following commands:
 
 $ cd <target>
-$ cmake [--preset=<preset>] -DEXAMPLE=hello_world -B build
+$ cmake [--preset=<preset>] -DEXAMPLE=multiple_processes -B build
 $ cmake --build build
 
 Resulting binary will be called `multiple_processes.elf` or `multiple_processes`. To run it, follow instructions on running binaries on your selected target platform.
