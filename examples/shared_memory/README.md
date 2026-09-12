@@ -11,9 +11,11 @@ This example demonstrates how to share memory between two processes. In CMRX, un
 
 To build this example choose your target platform (more in Examples) and run following commands:
 
+~~~
 $ cd <target>
 $ cmake [--preset=<preset>] -DEXAMPLE=shared_memory -B build
 $ cmake --build build
+~~~
 
 Resulting binary will be called `shared_memory.elf` or `shared_memory`. To run it, follow instructions on running binaries on your selected target platform.
 

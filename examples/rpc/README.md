@@ -16,9 +16,11 @@ Notice that `rpcserver` process does not define any own threads. All RPC calls a
 
 To build this example choose your target platform (more in Examples) and run following commands:
 
+~~~
 $ cd <target>
 $ cmake [--preset=<preset>] -DEXAMPLE=rpc -B build
 $ cmake --build build
+~~~
 
 Resulting binary will be called `rpc.elf` or `rpc`. To run it, follow instructions on running binaries on your selected target platform.
 
