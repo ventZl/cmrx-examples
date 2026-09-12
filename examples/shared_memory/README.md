@@ -21,5 +21,5 @@ Resulting binary will be called `shared_memory.elf` or `shared_memory`. To run i
 
 ## See also
 
-* [Reference manual - IPC](https://cmrxrtos.org/documentation/ipc/)
-* [API documentation - Shared Memory](https://cmrxrtos.org/documentation/api/shared/)
+* [Reference manual - Sharing Memory](/documentation/ipc/#shared-memory)
+* [API documentation - Shared Memory](/documentation/api/shared/)

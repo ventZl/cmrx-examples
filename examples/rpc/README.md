@@ -26,5 +26,5 @@ Resulting binary will be called `rpc.elf` or `rpc`. To run it, follow instructio
 
 ## See also
 
-* [Reference manual - IPC](https://cmrxrtos.org/documentation/ipc/)
-* [API documentation - RPC](https://cmrxrtos.org/documentation/api/rpc/)
+* [Reference manual - RPC](/documentation/ipc/#rpc)
+* [API documentation - RPC](/documentation/api/rpc/)

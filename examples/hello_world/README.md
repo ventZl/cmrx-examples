@@ -53,5 +53,5 @@ Resulting binary will be called `hello_world.elf` or `hello_world`. To run it, f
 
 ## See also
 
-* [Reference manual - Processes](https://cmrxrtos.org/documentation/processes/)
-* [API documentation - Static Initialization](https://cmrxrtos.org/documentation/api/init/)
+* [Reference manual - Processes](/documentation/processes/)
+* [API documentation - Static Initialization](/documentation/api/init/)
