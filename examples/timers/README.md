@@ -24,5 +24,5 @@ Resulting binary will be called `timers.elf` or `timers`. To run it, follow inst
 
 ## See also
 
-* [Reference manual - Processes](/documentation/timers/)
-* [API documentation - Static Initialization](/documentation/api/timer/)
+* [Reference manual - Timers](/documentation/timers/)
+* [API documentation - Timers](/documentation/api/timer/)
